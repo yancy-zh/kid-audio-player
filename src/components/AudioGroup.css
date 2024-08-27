@@ -1,0 +1,19 @@
+.audio-group-container {
+  color: #bdce83;
+}
+.track_container {
+  border: 2px solid #3c5c76;
+  display: flex;
+  flex-direction: row;
+  background-color: #2d3c54;
+  /* background-image: linear-gradient(109.6deg, #3c5c76 29.9%,#637da5 99.9%); */
+  justify-content: space-between;
+}
+.track_container > h3 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.track_container > audio {
+  align-self: center;
+  margin-right: 20px;
+}
