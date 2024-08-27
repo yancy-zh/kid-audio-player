@@ -6,28 +6,32 @@
 - [代码托管](https://gitee.com)
 - [github](https://github.com/)
 - [versel](https://vercel.com/)
+- [favicon converter](https://favicon.io/favicon-converter/)
+- [free svg converter](https://picsvg.com/)
 
 ## tools
 
 - [Hex color picker](https://imagecolorpicker.com/)
 
-## Available Scripts
+# Available Scripts
 
-### create the app
+## create the app
 
 `create-react-app myapp`
 
 In the project directory, you can run:
 
-### `npm start`
+## `npm start`
 
-### if error shows:
+## if error shows:
 
 `Cannot find module 'ajv/dist/compile/codegen'`
 then run `npm install ajv`
 
-### open the application
+# open the application
+
+## In development environment
 
 in the browser type `localhost:3000`
 
-###
+## Deployment

@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./hellokitty.svg";
 import "./App.css";
 import AudioGroup from "./components/AudioGroup";
 
@@ -14,6 +14,12 @@ const data = [
   { id: 9, label: "人体五官名称" },
   { id: 10, label: "各种职业名称" },
   { id: 11, label: "春夏秋冬四季" },
+  { id: 12, label: "公园景物名称" },
+  { id: 13, label: "服装鞋帽" },
+  { id: 14, label: "天文地理名称" },
+  { id: 15, label: "文具用品名称" },
+  { id: 16, label: "礼貌问候语" },
+  { id: 17, label: "交通工具名称" },
 ];
 function App() {
   return (
