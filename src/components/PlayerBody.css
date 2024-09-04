@@ -19,3 +19,12 @@
   align-self: center;
   margin-right: 20px;
 }
+
+.audio-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.single-play-btn-box {
+  align-self: center;
+}
