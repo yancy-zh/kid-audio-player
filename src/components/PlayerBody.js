@@ -3,7 +3,12 @@ import "./PlayerBody.css";
 import Audio from "./Audio.js";
 import PlayAll from "./PlayAll.js";
 import SinglePlayBtn from "./SinglePlayBtn.js";
-import { RetweetOutlined, DragOutlined } from "@ant-design/icons";
+import {
+  RetweetOutlined,
+  DragOutlined,
+  PlayCircleOutlined,
+  PauseCircleOutlined,
+} from "@ant-design/icons";
 export default function PlayerBody({ data }) {
   const [currSong, setCurrSong] = useState(data[0]);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,7 +19,7 @@ export default function PlayerBody({ data }) {
     return "/audios/" + fileName;
   };
   const handleSinglePlay = () => {
-    currSong.loop = true;
+    currSong.loop = !currSong.loop;
   };
   const handleOrderPlay = () => {};
   const handleRandomPlay = () => {};
@@ -29,6 +34,17 @@ export default function PlayerBody({ data }) {
   return (
     <div className="player-body">
       <div className="audio-control">
+        <div className="play_status">
+          {isPlaying ? (
+            <PlayCircleOutlined
+              style={{ fontSize: "24px", color: "#f82567" }}
+            />
+          ) : (
+            <PauseCircleOutlined
+              style={{ fontSize: "24px", color: "#f82567" }}
+            />
+          )}
+        </div>
         <SinglePlayBtn
           label="随机播放"
           icon_custom={<DragOutlined />}
@@ -51,6 +67,8 @@ export default function PlayerBody({ data }) {
               src={getSrcPath(getFileName(id, name))}
               reference={(elem) => (elRefs.current[id] = elem)}
               setCurrSong={setCurrSong}
+              setIsPlaying={setIsPlaying}
+              isPlaying={isPlaying}
             ></Audio>
           );
         })}
