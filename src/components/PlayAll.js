@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Button, ConfigProvider, Space } from "antd";
-import { PlaySquareOutlined } from "@ant-design/icons";
+import { SortAscendingOutlined } from "@ant-design/icons";
 import { css } from "@emotion/css";
-const App = (currSong) => {
+const App = ({handleClick}) => {
   const { getPrefixCls } = useContext(ConfigProvider.ConfigContext);
   const rootPrefixCls = getPrefixCls();
   const linearGradientButton = css`
@@ -30,9 +30,7 @@ const App = (currSong) => {
       }
     }
   `;
-  const handleClick = () => {
-    alert("play all clicked");
-  };
+
   return (
     <ConfigProvider
       button={{
@@ -43,7 +41,7 @@ const App = (currSong) => {
         <Button
           type="primary"
           size="large"
-          icon={<PlaySquareOutlined />}
+          icon={<SortAscendingOutlined />}
           onClick={handleClick}
         >
           顺序播放
