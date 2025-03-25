@@ -1,3 +1,5 @@
+# Project Description
+This project provides an audio player app which has a intuitive UI and build-in kids' education audio centents. The UI features single-song/full-album replay, big size buttons. 
 # Dependencies
 
 ## References
