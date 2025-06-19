@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+
 # Project description
 
 This is an app to play your customer audios in a kids-friendly style player, without any ads or paid content.
+This project provides an audio player app which has a intuitive UI and build-in kids' education audio centents. The UI features single-song/full-album replay, big size buttons.
 
 # Dependencies
 
