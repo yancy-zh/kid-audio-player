@@ -3,7 +3,7 @@ import "./App.css";
 import PlayerBody from "./components/PlayerBody";
 
 const data = [
-  { id: 1, name: "数字一到十" },
+  { id: 1, name: "小鸡蛋黄" },
   { id: 2, name: "家庭成员称呼" },
   { id: 3, name: "各种颜色名称" },
   { id: 4, name: "十二个月名称" },
