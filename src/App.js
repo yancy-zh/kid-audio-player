@@ -1,26 +1,17 @@
 import logo from "./hellokitty.svg";
 import "./App.css";
 import PlayerBody from "./components/PlayerBody";
-
-const data = [
-  { id: 1, name: "小鸡蛋黄" },
-  { id: 2, name: "家庭成员称呼" },
-  { id: 3, name: "各种颜色名称" },
-  { id: 4, name: "十二个月名称" },
-  { id: 5, name: "家养小动物名称" },
-  { id: 6, name: "水果食物名称" },
-  { id: 7, name: "一周星期名称" },
-  { id: 8, name: "动物园动物名称" },
-  { id: 9, name: "人体五官名称" },
-  { id: 10, name: "各种职业名称" },
-  { id: 11, name: "春夏秋冬四季" },
-  { id: 12, name: "公园景物名称" },
-  { id: 13, name: "服装鞋帽" },
-  { id: 14, name: "天文地理名称" },
-  { id: 15, name: "文具用品名称" },
-  { id: 16, name: "礼貌问候语" },
-  { id: 17, name: "交通工具名称" },
-];
+// obtain a list of filenames within a "public" folder
+const audioContext = require.context("/public/audios", false, /\.m4a$/);
+const audioNames = audioContext.keys().map((key) => key.replace("./", ""));
+// read audio names to data
+const data = [];
+audioNames.map((item, index) => {
+  let arr = item.split("-");
+  let i = arr[0].trim();
+  let name = arr[1].trim();
+  data.push({ id: parseInt(i), name: name.substring(0, name.length - 4) });
+});
 function App() {
   return (
     <div className="App">
